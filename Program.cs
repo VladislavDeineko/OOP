@@ -50,6 +50,19 @@ namespace Excursion
             }
 
             Console.WriteLine("\nКоличество студентов участников экскурсии: " + count);
+
+            //
+            List<Person> students = new List<Person>() { st1, st2, st3 };
+            List<Person> teachers = new List<Person>() { tc1, tc2, per };
+            Lift liftStudent = new Lift("Лифт для студентов", 200);
+            Lift liftTeacher = new Lift("Лифт для учителей", 200);
+            Console.ForegroundColor = ConsoleColor.Red;
+            liftStudent.occupaing(students);
+            liftTeacher.occupaing(teachers);
+            Console.ForegroundColor = ConsoleColor.Green;
+            liftStudent.linfo();
+            liftTeacher.linfo();
+
             Console.ReadLine();
         }
     }
